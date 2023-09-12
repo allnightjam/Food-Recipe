@@ -1,8 +1,14 @@
 const { Pool } = require('pg');
 
-const pool = new Pool({
+const dbParams = {
   user: 'labber',
   password: 'labber',
   host: 'localhost',
   database: 'foodrecipes'
-});
+};
+
+const db = new Pool(dbParams);
+
+db.connect();
+
+module.exports = db;

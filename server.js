@@ -1,14 +1,22 @@
 const express = require("express");
 const app = express();
+const db = require("../Food-Recipe/db/connection");
 const PORT = 8080; // default port 8080
 
-// const urlDatabase = {
-//   "b2xVn2": "http://www.lighthouselabs.ca",
-//   "9sm5xK": "http://www.google.com"
-// };
+app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.send("Hello!");
+  const queryString = `SELECT * FROM meals`;
+  return db.query(queryString)
+    .then(data => {
+      const meals = data.rows;
+      console.log("data:", meals)
+      return res.render('index', {meals})
+    })
+    .catch(error => {
+      console.error("Error in retrieving meals");
+      throw error;
+    });
 });
 
 app.listen(PORT, () => {
