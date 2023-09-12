@@ -9,10 +9,23 @@
 <body>
   <header> 
     <h1> Food Recipes </h1>
-    <div class = "search">
+    <div class="search">
       <input type="text" id="search-input" placeholder="------">
       <button id="search-button">Search</button>
     </div>
+    <% meals.forEach(meal => { %>
+      <div class="meals-container">
+        <div class="meal-photo">
+          <img class="meal-photo-data" src="<%= meal.photo_url %>">
+        </div>
+        <div class="meal-name">
+          <%= meal.name %>
+        </div>
+        <div class="meal-body">
+          <%= meal.body %>
+        </div>
+      </div>
+    <% }); %>
   </header>
 
 
