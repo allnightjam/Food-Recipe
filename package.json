@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/allnightjam/Food-Recipe/issues"
   },
-  "homepage": "https://github.com/allnightjam/Food-Recipe#readme"
+  "homepage": "https://github.com/allnightjam/Food-Recipe#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
