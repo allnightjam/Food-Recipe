@@ -6,6 +6,19 @@ const PORT = 8080; // default port 8080
 app.set("view engine", "ejs");
 app.use(express.static('public'));
 
+app.get("/api/meals", (req, res) => {
+  const queryString = `SELECT * FROM meals`;
+  return db.query(queryString)
+    .then(data => {
+      const meals = data.rows;
+      res.json(meals);
+    })
+    .catch(error => {
+      console.error("Error in retrieving meals");
+      res.status(500).json({error: "Internal Server Error"});
+    });
+});
+
 app.get("/", (req, res) => {
   const queryString = `SELECT * FROM meals`;
   return db.query(queryString)
