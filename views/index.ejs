@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Food Recipes</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Food Recipes</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <header> 
@@ -13,22 +13,24 @@
       <input type="text" id="search-input" placeholder="------">
       <button id="search-button">Search</button>
     </div>
-    <% meals.forEach(meal => { %>
-      <div class="meals-container">
-        <div class="meal-photo">
-          <img class="meal-photo-data" src="<%= meal.photo_url %>">
+    <div class="main-meals">
+      <% meals.forEach(meal => { %>
+        <div class="meals-container">
+          <div class="meal-photo">
+            <img class="meal-photo-data" src="<%= meal.photo_url %>">
+          </div>
+          <div class="meal-name">
+            <%= meal.name %>
+          </div>
+          <div class="meal-body">
+            <%= meal.body %>
+          </div>
         </div>
-        <div class="meal-name">
-          <%= meal.name %>
-        </div>
-        <div class="meal-body">
-          <%= meal.body %>
-        </div>
+        <% }); %>
       </div>
-    <% }); %>
   </header>
 
 
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
 </body>
 </html>

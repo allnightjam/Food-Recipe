@@ -4,6 +4,7 @@ const db = require("../Food-Recipe/db/connection");
 const PORT = 8080; // default port 8080
 
 app.set("view engine", "ejs");
+app.use(express.static('public'));
 
 app.get("/", (req, res) => {
   const queryString = `SELECT * FROM meals`;
