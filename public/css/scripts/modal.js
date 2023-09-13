@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeButton = document.querySelector(".close");
   const modalContent = document.querySelector(".modal-content");
 
-  mealContainers.forEach(function (container) {
+  mealContainers.forEach(function (container, index) {
     container.addEventListener("click", async function () {
       try {
         const response = await fetch("/api/meals");
