@@ -76,7 +76,7 @@ header {
 }
 
 .modal-content {
-  background-color: aliceblue;
+  background-color: rgb(253, 234, 229);
   margin: 10% auto;
   padding: 20px;
   border: 1px solid black;
@@ -107,7 +107,6 @@ header {
   display: block;
   margin: 0 auto 40px;
   border-radius: 10px;
-  border: 1px solid white;
   box-shadow: rgb(70, 53, 48);
 }
 
