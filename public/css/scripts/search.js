@@ -9,7 +9,6 @@ searchInput.addEventListener("input", function(event) {
     
   mealNames.forEach(function(mealName) {
     const mealNameText = mealName.innerText.toLowerCase();
-    console.log("meal:", mealNameText, "text:", searchTerm);
     if (mealNameText.includes(searchTerm)) {
       showContainer = true;  
     }

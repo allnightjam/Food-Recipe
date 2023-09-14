@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     container.addEventListener("click", async function () {
       try {
         const response = await fetch("/api/meals");
-        if (response.status<200 || response.status >= 300) {
+        if (response.status < 200 || response.status >= 300) {
           throw new Error("Modal meals error");
         }
 
