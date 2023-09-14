@@ -2,6 +2,8 @@ DROP TABLE IF EXISTS meals CASCADE;
 CREATE TABLE meals (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL,
+  category VARCHAR(255) NOT NULL,
   photo_url TEXT NOT NULL,
+  instructions TEXT NOT NULL,
   body TEXT NOT NULL
 );
