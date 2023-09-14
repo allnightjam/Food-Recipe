@@ -8,33 +8,33 @@
 </head>
 <body>
   <header> 
-    <h1> Food Recipes </h1>
+    <h1 class="website-name"> Food Recipes </h1>
     <div class="search">
       <input type="text" id="search-input" placeholder="------">
       <button id="search-button">Search</button>
     </div>
-    <div class="main-meals">
-      <% meals.forEach(meal => { %>
-        <div class="meals-container">
-          <div class="meal-photo">
-            <img class="meal-photo-data" src="<%= meal.photo_url %>">
-          </div>
-          <div class="meal-name">
-            <h3><%= meal.name %></h3>
-          </div>
-
-        </div>
-        <div id="meal-modal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-              <div class="meal-body">
-                <%= meal.body %>
-              </div>
-          </div>
-        </div>
-        <% }); %>
-      </div>
   </header>
+  <div class="main-meals">
+    <% meals.forEach(meal => { %>
+      <div class="meals-container">
+        <div class="meal-photo">
+          <img class="meal-photo-data" src="<%= meal.photo_url %>">
+        </div>
+        <div class="meal-name">
+          <h3><%= meal.name %></h3>
+        </div>
+
+      </div>
+      <div id="meal-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+            <div class="meal-body">
+              <%= meal.body %>
+            </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
 
 
   <script src="/css/scripts/modal.js"></script>
