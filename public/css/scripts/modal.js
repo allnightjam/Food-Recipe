@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         modalContent.innerHTML = `
           <span class="close">&times;</span>
-          <h2>${meal.name}</h2
-          <img src="${meal.photo_url}">
+          <h2>${meal.name}</h2>
+          <img src=${meal.photo_url}>
           <p>${meal.body}</p>
         `;
         
