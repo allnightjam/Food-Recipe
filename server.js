@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const db = require("../Food-Recipe/db/connection");
-const PORT = 8080; // default port 8080
+const PORT = 8080;
 
 app.set("view engine", "ejs");
 app.use(express.static('public'));
