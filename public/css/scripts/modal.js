@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         modalContent.innerHTML = `
           <span class="close">&times;</span>
-          <h2>${meal.name}</h2>
-          <img src=${meal.photo_url}>
-          <p>${meal.body}</p>
+          <h2 class="modal-meal-name">${meal.name}</h2>
+          <img class="modal-meal-photo" src=${meal.photo_url}>
+          <p class="modal-meal-body">${meal.body}</p>
         `;
         
     modal.style.display= "block";
