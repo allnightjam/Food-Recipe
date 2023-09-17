@@ -112,10 +112,15 @@ header {
 
 .close {
   position: absolute;
-  top: 10em;
-  right: 11.5em;
-  font-size: 24px;
+  top: 6em;
+  right: 7em;
+  font-size: 40px;
   cursor: pointer;
+  transition: all 0.3s ease();
+}
+
+.close:hover {
+  color: rgb(156, 113, 102);
 }
 
 .search {
