@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     });
   });
-  
   modal.addEventListener("click", function (event) {
     if (event.target.classList.contains("close")) {
       modal.style.display = "none";
