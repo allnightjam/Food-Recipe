@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const meal = mealsData[index];
 
         modalContent.innerHTML = `
-          <span class="close">&times;</span>
-          <h1 class="modal-meal-name">${meal.name}</h1>
-          <img class="modal-meal-photo" src=${meal.photo_url}>
-          <p class="modal-meal-body">${meal.body}</p>
-          <h2>Instructions</h2>
-          <p class="modal-meal-instructions">${meal.instructions}</p>
-          <h4 class="modal-meal-category">${meal.category}</h4>
+        <h1 class="modal-meal-name">${meal.name}</h1>
+        <img class="modal-meal-photo" src=${meal.photo_url}>
+        <p class="modal-meal-body">${meal.body}</p>
+        <h2>Instructions</h2>
+        <p class="modal-meal-instructions">${meal.instructions}</p>
+        <h4 class="modal-meal-category">${meal.category}</h4>
+        <span class="close">&times;</span>
         `;
         
     modal.style.display= "block";
@@ -32,9 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     });
   });
-
-  closeButton.addEventListener("click", function () {
-    modal.style.display = "none";
+  
+  modal.addEventListener("click", function (event) {
+    if (event.target.classList.contains("close")) {
+      modal.style.display = "none";
+    }
   });
 
   modal.addEventListener("click", function (event) {
